@@ -1,0 +1,31 @@
+{
+  "name": "khals-safety-solutions",
+  "version": "1.0.0",
+  "description": "KHALS Safety Solutions - Safety Equipment Supplier Website",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site, no build needed'",
+    "start": "echo 'Use vercel dev or vercel deploy'"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@vercel/node": "^3.0.11",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "safety",
+    "equipment",
+    "PPE",
+    "safety-shoes",
+    "tamil-nadu",
+    "khals"
+  ],
+  "author": "KHALS Safety Solutions",
+  "license": "MIT"
+}
