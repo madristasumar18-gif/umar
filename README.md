@@ -762,7 +762,7 @@
         <div class="contact-item-icon">🌐</div>
         <div class="contact-item-text">
           <h4>Website</h4>
-          <p><a href="http://www.khalssafety.in" target="_blank" rel="noopener">www.khalssafety.com</a></p>
+          <p><a href="http://www.khalssafety.in" target="_blank" rel="noopener">www.khalssafety.in</a></p>
         </div>
       </div>
       <div class="contact-item">
