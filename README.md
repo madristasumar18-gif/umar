@@ -1,1 +1,887 @@
 # umar
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KHALS Safety Solutions – Trusted Safety Equipment Supplier, Tamil Nadu</title>
+<meta name="description" content="KHALS Safety Solutions – Authorised JCB Safety Shoe distributor and leading safety equipment supplier in Thiruvallur, Tamil Nadu. Helmets, PPE, uniforms & more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --yellow: #F5C518;
+    --yellow-dark: #C8A000;
+    --black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --dark-gray: #2B2B2B;
+    --mid-gray: #444;
+    --light-gray: #F2F2F0;
+    --white: #FFFFFF;
+    --red: #D63B2F;
+    --text-body: #3A3A3A;
+    --text-muted: #777;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --transition: 0.22s ease;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-body);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    border-bottom: 2px solid var(--yellow);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    color: var(--yellow);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--white); }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color var(--transition);
+  }
+  .nav-links a:hover { color: var(--yellow); }
+  .nav-cta {
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 9px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background var(--transition), transform var(--transition);
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--yellow-dark); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,197,24,0.12);
+    border: 1px solid rgba(245,197,24,0.3);
+    border-radius: 100px;
+    padding: 5px 14px;
+    color: var(--yellow);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-eyebrow svg { width: 14px; height: 14px; fill: var(--yellow); }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 .accent { color: var(--yellow); }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 32px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background var(--transition), transform var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 13px 32px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    border: 1.5px solid #444;
+    transition: border-color var(--transition), color var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-secondary:hover { border-color: var(--yellow); color: var(--yellow); }
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2.5rem;
+    border-top: 1px solid #222;
+    width: 100%;
+    max-width: 600px;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--yellow);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label { font-size: 0.75rem; color: #777; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* diagonal stripe bg accent */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -200px;
+    width: 600px; height: 600px;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 12px,
+      rgba(245,197,24,0.03) 12px,
+      rgba(245,197,24,0.03) 24px
+    );
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--yellow);
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .trust-item svg { width: 18px; height: 18px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 90px 5%; }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--yellow-dark);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.05;
+    color: var(--black);
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 3rem;
+  }
+
+  /* ── PRODUCTS ── */
+  .products { background: var(--light-gray); }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .product-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    border: 1.5px solid #e8e8e4;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  }
+  .product-card.featured { border-color: var(--yellow); }
+  .product-card.featured::before {
+    content: 'BEST SELLER';
+    position: absolute;
+    top: 14px; right: -22px;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 28px;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  .product-icon {
+    width: 52px; height: 52px;
+    background: var(--black);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+  }
+  .product-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.4rem;
+  }
+  .product-card p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* ── WHY US ── */
+  .why-us { background: var(--charcoal); }
+  .why-us .section-title { color: var(--white); }
+  .why-us .section-sub { color: #888; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2px;
+  }
+  .why-item {
+    background: var(--dark-gray);
+    padding: 32px 28px;
+    transition: background var(--transition);
+  }
+  .why-item:hover { background: #333; }
+  .why-item:first-child { border-radius: var(--radius-lg) 0 0 var(--radius-lg); }
+  .why-item:last-child { border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+  .why-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--yellow);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .why-item h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+  .why-item p { font-size: 0.85rem; color: #888; line-height: 1.6; }
+
+  /* ── REVIEWS ── */
+  .reviews { background: var(--white); }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .review-card {
+    background: var(--light-gray);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    border-left: 4px solid var(--yellow);
+  }
+  .stars { color: var(--yellow); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+  .review-text {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+  }
+  .review-author { font-size: 0.8rem; font-weight: 700; color: var(--mid-gray); text-transform: uppercase; letter-spacing: 0.06em; }
+  .review-source { font-size: 0.75rem; color: var(--text-muted); }
+
+  /* ── JCB STRIP ── */
+  .jcb-strip {
+    background: var(--yellow);
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .jcb-strip h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--black);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+  }
+  .jcb-strip p { font-size: 0.95rem; color: #333; margin-top: 0.75rem; line-height: 1.6; }
+  .jcb-badge {
+    background: var(--black);
+    color: var(--yellow);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    padding: 6px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--black); }
+  .contact .section-title { color: var(--white); }
+  .contact .section-sub { color: #888; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .contact-info { }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 2rem;
+  }
+  .contact-item-icon {
+    width: 44px; height: 44px;
+    background: rgba(245,197,24,0.1);
+    border: 1px solid rgba(245,197,24,0.25);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+  .contact-item-text h4 { font-size: 0.78rem; font-weight: 600; color: var(--yellow); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem; }
+  .contact-item-text p { font-size: 0.92rem; color: #ccc; line-height: 1.5; }
+  .contact-item-text a { color: #ccc; text-decoration: none; }
+  .contact-item-text a:hover { color: var(--yellow); }
+  .contact-form {
+    background: var(--charcoal);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    border: 1px solid #333;
+  }
+  .form-title { font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+  .form-subtitle { font-size: 0.82rem; color: #888; margin-bottom: 1.8rem; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    padding: 10px 14px;
+    transition: border-color var(--transition);
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--yellow); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group select option { background: #1f1f1f; color: var(--white); }
+  .form-submit {
+    width: 100%;
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: background var(--transition);
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--yellow-dark); }
+
+  /* ── MAP STRIP ── */
+  .map-strip { padding: 0; height: 340px; }
+  .map-strip iframe { width: 100%; height: 100%; border: none; display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050505;
+    padding: 40px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top: 1px solid #1a1a1a;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--yellow);
+    letter-spacing: 0.05em;
+  }
+  .footer-logo span { color: #555; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.8rem; color: #555; text-decoration: none; transition: color var(--transition); }
+  .footer-links a:hover { color: var(--yellow); }
+  .footer-copy { font-size: 0.75rem; color: #444; }
+
+  /* ── FLOATING CTA ── */
+  .float-wa {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    width: 58px; height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 200;
+    transition: transform var(--transition);
+  }
+  .float-wa:hover { transform: scale(1.1); }
+  .float-wa svg { width: 28px; height: 28px; fill: white; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .jcb-strip { grid-template-columns: 1fr; }
+    .why-item:first-child, .why-item:last-child { border-radius: 0; }
+    .why-item:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+    .why-item:last-child { border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+    section { padding: 60px 5%; }
+    .hero-stats { gap: 1.5rem; }
+    .contact-form { padding: 24px 20px; }
+  }
+
+  /* Scroll animation */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">KHALS <span>SAFETY</span></a>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:+919884081509">📞 Call Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.6l-3 2.9.7 4.1L8 10.5l-3.7 2.1.7-4.1-3-2.9 4.1-.8z"/></svg>
+    5.0 ★ Rating · 2300 Google Reviews · Thiruvallur, Tamil Nadu
+  </div>
+  <h1>Your <span class="accent">Safety</span><br>Is Our Business</h1>
+  <p class="hero-sub">Tamil Nadu's trusted supplier for safety shoes, PPE, helmets, workwear uniforms and industrial safety equipment — delivered on time, every time.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="#contact">
+      Get a Quote →
+    </a>
+    <a class="btn-secondary" href="tel:+919884081509">
+      ☎ 098840 81509
+    </a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">5.0★</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">2300+</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">JCB</span>
+      <span class="stat-label">Authorised Distributor</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    Timely Delivery
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    ISI / CE Certified Products
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    Bulk & Retail Orders
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    Open Until 10 PM
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="reveal">
+    <div class="section-label">What We Supply</div>
+    <h2 class="section-title">Complete Safety Equipment Range</h2>
+    <p class="section-sub">Everything you need to keep your workforce protected — sourced from trusted brands, stocked locally in Thiruvallur.</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card featured reveal">
+      <div class="product-icon">👟</div>
+      <h3>Safety Shoes</h3>
+      <p>JCB, Bata, Liberty & more. Steel-toe, anti-slip, and chemical-resistant options for every site condition.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">⛑️</div>
+      <h3>Safety Helmets</h3>
+      <p>ISI-marked hard hats for construction, manufacturing, and industrial environments. Full range of colours.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🦺</div>
+      <h3>High-Vis Vests & PPE</h3>
+      <p>Reflective jackets, body harnesses, knee pads, and full personal protective equipment kits.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">👔</div>
+      <h3>Workwear Uniforms</h3>
+      <p>Custom staff uniforms with logo printing. Flame-retardant, acid-wash, and standard workwear available.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🧤</div>
+      <h3>Gloves & Hand Protection</h3>
+      <p>Cotton, leather, nitrile, and cut-resistant gloves for handling, welding, and chemical applications.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">👁️</div>
+      <h3>Eye & Face Protection</h3>
+      <p>Safety goggles, welding shields, and face visors to protect against impact, dust, and UV hazards.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🎧</div>
+      <h3>Hearing Protection</h3>
+      <p>Earplugs and earmuffs in various attenuation ratings for high-noise industrial environments.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">😷</div>
+      <h3>Respiratory Protection</h3>
+      <p>Dust masks, half-face respirators, and full-face respirators with cartridge filter systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- JCB AUTHORIZED STRIP -->
+<div class="jcb-strip">
+  <div>
+    <span class="jcb-badge">AUTHORIZED DISTRIBUTOR</span>
+    <h2>Official JCB Safety Shoe Distributor in Tamil Nadu</h2>
+    <p>As an authorised distributor, we carry the full JCB safety footwear range — guaranteed genuine products with manufacturer warranty. Best prices, always in stock.</p>
+  </div>
+  <div style="text-align:center;">
+    <div style="background: #0D0D0D; border-radius: 16px; padding: 40px 30px; display: inline-block; max-width: 280px;">
+      <div style="font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: #F5C518; line-height: 1; letter-spacing: 0.05em;">JCB</div>
+      <div style="font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 6px;">Safety Footwear</div>
+      <div style="margin-top: 20px; font-size: 0.78rem; color: #aaa; line-height: 1.6;">Steel Toe · Anti-Slip<br>Chemical Resistant · ESD</div>
+      <a class="btn-primary" href="tel:+919884081509" style="margin-top: 20px; display: inline-flex; font-size: 0.82rem; padding: 10px 22px;">Enquire Now →</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="reveal">
+    <div class="section-label" style="color: var(--yellow);">Why KHALS</div>
+    <h2 class="section-title">Safety Experts You Can Trust</h2>
+    <p class="section-sub" style="color: #888;">Local knowledge, genuine products, and a commitment to keeping your team safe on the job.</p>
+  </div>
+  <div class="why-grid reveal">
+    <div class="why-item">
+      <span class="why-num">01</span>
+      <h3>Genuine Products Only</h3>
+      <p>We stock only ISI-marked, CE-certified, and brand-authorised safety equipment. No counterfeits, ever.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-num">02</span>
+      <h3>Expert Guidance</h3>
+      <p>Our team understands site requirements and helps you choose the right equipment for the right hazard.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-num">03</span>
+      <h3>Bulk Order Ready</h3>
+      <p>From 10 pairs to 10,000 — we handle large workforce orders for factories, construction firms, and contractors.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-num">04</span>
+      <h3>Fast Local Delivery</h3>
+      <p>Based in Polivakkam, Thiruvallur — we serve the entire Tamil Nadu region with quick dispatch and reliable delivery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reveal">
+    <div class="section-label">What Clients Say</div>
+    <h2 class="section-title">Trusted By Workers Across Tamil Nadu</h2>
+    <p class="section-sub">Consistently rated 5 stars on Google for product quality, expert service, and reliable delivery.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"They have the best collection of safety shoes I've found in the area — great variety, genuine brands, and competitive pricing."</p>
+      <div class="review-author">Satisfied Customer</div>
+      <div class="review-source">Google Review</div>
+    </div>
+    <div class="review-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Timely delivery of my staff's uniforms. Very professional service from the team at KHALS. Will definitely order again."</p>
+      <div class="review-author">Business Client</div>
+      <div class="review-source">Google Review</div>
+    </div>
+    <div class="review-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Good service and excellent product knowledge. The team helped us select the right PPE for our specific site requirements."</p>
+      <div class="review-author">M. Umar</div>
+      <div class="review-source">Google Review · 2 years ago</div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: 2.5rem;" class="reveal">
+    <a href="https://www.google.com/search?q=khals+safety+solutions" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background: #f1f1ef; border-radius: 100px; padding: 10px 22px; font-size: 0.85rem; font-weight: 600; color: #333; text-decoration: none; border: 1px solid #ddd; transition: background 0.2s;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#4285F4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      View All 2300 Google Reviews
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="section-label" style="color: var(--yellow);">Get In Touch</div>
+    <h2 class="section-title">Request a Quote or Enquiry</h2>
+    <p class="section-sub">Whether you need 5 safety shoes or a full-site PPE kit for 500 workers, we'll get you the right equipment at the right price.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text">
+          <h4>Address</h4>
+          <p>Plot No. 52, SPH Road,<br>Sree Venkateshwara Nagar,<br>Polivakkam, Thiruvallur – 602002<br>Tamil Nadu, India</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <div class="contact-item-text">
+          <h4>Phone</h4>
+          <p><a href="tel:+919884081509">+91 98840 81509</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🌐</div>
+        <div class="contact-item-text">
+          <h4>Website</h4>
+          <p><a href="http://www.khalssafety.com" target="_blank" rel="noopener">www.khalssafety.com</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🕐</div>
+        <div class="contact-item-text">
+          <h4>Working Hours</h4>
+          <p>Open Daily · Closes at 10:00 PM<br><span style="color: #4ade80; font-size: 0.8rem;">● Open Now</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-title">Send Us an Enquiry</div>
+      <div class="form-subtitle">We'll call you back within 2 hours during business hours.</div>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Rajan Kumar" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 98XXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>Product Needed</label>
+          <select>
+            <option value="">Select a category…</option>
+            <option>Safety Shoes (JCB / Other Brands)</option>
+            <option>Safety Helmets</option>
+            <option>Workwear Uniforms</option>
+            <option>PPE / Harness / Vests</option>
+            <option>Gloves & Hand Protection</option>
+            <option>Respiratory Protection</option>
+            <option>Eye & Face Protection</option>
+            <option>Multiple / Full Site PPE Kit</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Order Size</label>
+          <select>
+            <option>Individual / Small (1–20 units)</option>
+            <option>Medium Bulk (20–100 units)</option>
+            <option>Large Bulk (100–500 units)</option>
+            <option>Enterprise (500+ units)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (optional)</label>
+          <textarea placeholder="Tell us your site requirements, specific brands needed, or any questions…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-strip">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.3!2d79.9!3d13.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528b0109ad6d41%3A0xd8ae017f17ddba84!2sKHALS%20SAFETY%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1680000000000"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="KHALS Safety Solutions location on Google Maps">
+  </iframe>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KHALS <span>SAFETY SOLUTIONS</span></div>
+  <nav class="footer-links">
+    <a href="#products">Products</a>
+    <a href="#why-us">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="http://www.khalssafety.com" target="_blank" rel="noopener">Website</a>
+  </nav>
+  <div class="footer-copy">© 2026 KHALS Safety Solutions, Thiruvallur, Tamil Nadu</div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" href="https://wa.me/919884081509?text=Hi%2C%20I%20need%20safety%20equipment%20from%20KHALS%20Safety%20Solutions." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Sticky nav shadow on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.5)' : '';
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Enquiry Sent! We\'ll call you soon.';
+    btn.style.background = '#22c55e';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Send Another Enquiry →';
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 5000);
+  }
+</script>
+</body>
+</html>
