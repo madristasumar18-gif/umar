@@ -956,7 +956,7 @@
     <a href="#why-us">About</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
-    <a href="http://www.khalssafety.com" target="_blank" rel="noopener">Website</a>
+    <a href="http://www.khalssafety.in" target="_blank" rel="noopener">Website</a>
   </nav>
   <div class="footer-copy">© 2026 KHALS Safety Solutions, Thiruvallur, Tamil Nadu</div>
 </footer>
@@ -1035,11 +1035,7 @@
         throw new Error('Failed to send enquiry');
       }
     } catch (error) {
-      console.error('Error:', error);
-      btn.textContent = 'Error sending. Try again →';
-      btn.style.background = '#ef4444';
-      btn.disabled = false;
-      showToast('Error sending enquiry. Please try again or call us directly.');
+      // On error, directly open WhatsApp
       
       // Fallback: Open WhatsApp
       setTimeout(() => {
