@@ -88,6 +88,78 @@
   }
   .nav-cta:hover { background: var(--yellow-dark); transform: translateY(-1px); }
 
+  /* ── NAV DROPDOWN (Products > Safety Shoes) ── */
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .nav-dropdown > a svg {
+    width: 10px;
+    height: 10px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    transition: transform var(--transition);
+  }
+  .nav-dropdown:hover > a svg,
+  .nav-dropdown:focus-within > a svg { transform: rotate(180deg); }
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    transform: translate(-50%, 8px);
+    background: var(--charcoal);
+    border: 1px solid #333;
+    border-radius: var(--radius-md);
+    min-width: 210px;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.45);
+    z-index: 150;
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+  .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 6px;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: background var(--transition), color var(--transition);
+  }
+  .dropdown-menu a:hover {
+    background: rgba(245,197,24,0.12);
+    color: var(--yellow);
+  }
+  .dropdown-menu .dd-tag {
+    margin-left: auto;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding: 2px 7px;
+    border-radius: 100px;
+    text-transform: uppercase;
+  }
+
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -272,13 +344,16 @@
     cursor: default;
     position: relative;
     overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
   .product-card:hover {
     border-color: var(--yellow);
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(0,0,0,0.08);
   }
-  .product-card.featured { border-color: var(--yellow); }
+  .product-card.featured { border-color: var(--yellow); cursor: pointer; }
   .product-card.featured::before {
     content: 'BEST SELLER';
     position: absolute;
@@ -312,6 +387,14 @@
     font-size: 0.83rem;
     color: var(--text-muted);
     line-height: 1.55;
+  }
+  .product-card .view-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--yellow-dark);
+    letter-spacing: 0.02em;
   }
 
   /* ── WHY US ── */
@@ -564,7 +647,20 @@
 <nav>
   <a class="nav-logo" href="#">KHALS <span>SAFETY</span></a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
+    <li class="nav-dropdown">
+      <a href="#products">
+        Products
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="dropdown-menu">
+        <a href="safety-shoes.html">👟 Safety Shoes <span class="dd-tag">New</span></a>
+        <a href="#products">⛑️ Safety Helmets</a>
+        <a href="#products">🦺 High-Vis & PPE</a>
+        <a href="#products">👔 Workwear Uniforms</a>
+        <a href="#products">🧤 Gloves & Hand Protection</a>
+        <a href="#products">😷 Respiratory Protection</a>
+      </div>
+    </li>
     <li><a href="#why-us">Why Us</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -632,11 +728,12 @@
     <p class="section-sub">Everything you need to keep your workforce protected — sourced from trusted brands, stocked locally in Thiruvallur.</p>
   </div>
   <div class="products-grid">
-    <div class="product-card featured reveal">
+    <a href="safety-shoes.html" class="product-card featured reveal">
       <div class="product-icon">👟</div>
       <h3>Safety Shoes</h3>
       <p>JCB, Bata, Liberty & more. Steel-toe, anti-slip, and chemical-resistant options for every site condition.</p>
-    </div>
+      <span class="view-link">View Full Range →</span>
+    </a>
     <div class="product-card reveal">
       <div class="product-icon">⛑️</div>
       <h3>Safety Helmets</h3>
@@ -687,7 +784,7 @@
       <div style="font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: #F5C518; line-height: 1; letter-spacing: 0.05em;">JCB</div>
       <div style="font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 6px;">Safety Footwear</div>
       <div style="margin-top: 20px; font-size: 0.78rem; color: #aaa; line-height: 1.6;">Steel Toe · Anti-Slip<br>Chemical Resistant · ESD</div>
-      <a class="btn-primary" href="tel:+919884081509" style="margin-top: 20px; display: inline-flex; font-size: 0.82rem; padding: 10px 22px;">Enquire Now →</a>
+      <a class="btn-primary" href="safety-shoes.html" style="margin-top: 20px; display: inline-flex; font-size: 0.82rem; padding: 10px 22px;">Browse JCB Shoes →</a>
     </div>
   </div>
 </div>
@@ -854,6 +951,7 @@
 <footer>
   <div class="footer-logo">KHALS <span>SAFETY SOLUTIONS</span></div>
   <nav class="footer-links">
+    <a href="safety-shoes.html">Safety Shoes</a>
     <a href="#products">Products</a>
     <a href="#why-us">About</a>
     <a href="#reviews">Reviews</a>
