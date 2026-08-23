@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety Shoes | KHALS Safety Solutions</title>
+<meta name="description" content="Browse the full JCB safety shoe range at KHALS Safety Solutions — steel toe, composite toe, ESD, welding, and heat-resistant safety footwear in Thiruvallur, Tamil Nadu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  :root {
+    --yellow: #F5C518;
+    --yellow-dark: #C8A000;
+    --black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --dark-gray: #2B2B2B;
+    --light-gray: #F2F2F0;
+    --white: #FFFFFF;
+    --text-muted: #888;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --transition: 0.22s ease;
+  }
+ 
+  html { scroll-behavior: smooth; }
+ 
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+ 
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+ 
+  /* ── NAV (matches main site) ── */
+  nav {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    border-bottom: 2px solid var(--yellow);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    color: var(--yellow);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--white); }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--yellow);
+    border: 1.5px solid var(--yellow);
+    padding: 9px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+  }
+  .back-btn:hover {
+    background: var(--yellow);
+    color: var(--black);
+    transform: translateX(-3px);
+  }
+ 
+  /* ── Hazard stripe signature element ── */
+  .hazard-stripe {
+    height: 8px;
+    width: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--yellow),
+      var(--yellow) 14px,
+      var(--black) 14px,
+      var(--black) 28px
+    );
+  }
+ 
+  /* ── Page header ── */
+  .page-header {
+    padding: 64px 5% 40px;
+    text-align: center;
+    background: radial-gradient(ellipse at top, rgba(245,197,24,0.08), transparent 60%), var(--black);
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--yellow);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .page-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+  .page-header p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.02rem;
+  }
+ 
+  /* ── Gallery grid ── */
+  .gallery-section { padding: 50px 5% 90px; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: 1fr; gap: 24px; }
+    .page-header { padding: 44px 6% 30px; }
+  }
+ 
+  /* ── Product card ── */
+  .card {
+    background: var(--charcoal);
+    border: 1px solid #2c2c30;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: cardIn 0.6s ease forwards;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+    border-color: var(--yellow-dark);
+  }
+  @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
+  .gallery-grid .card:nth-child(1) { animation-delay: 0.02s; }
+  .gallery-grid .card:nth-child(2) { animation-delay: 0.06s; }
+  .gallery-grid .card:nth-child(3) { animation-delay: 0.10s; }
+  .gallery-grid .card:nth-child(4) { animation-delay: 0.14s; }
+  .gallery-grid .card:nth-child(5) { animation-delay: 0.18s; }
+  .gallery-grid .card:nth-child(6) { animation-delay: 0.22s; }
+  .gallery-grid .card:nth-child(7) { animation-delay: 0.26s; }
+  .gallery-grid .card:nth-child(8) { animation-delay: 0.30s; }
+  .gallery-grid .card:nth-child(9) { animation-delay: 0.34s; }
+  .gallery-grid .card:nth-child(10) { animation-delay: 0.38s; }
+  .gallery-grid .card:nth-child(11) { animation-delay: 0.42s; }
+  .gallery-grid .card:nth-child(12) { animation-delay: 0.46s; }
+  .gallery-grid .card:nth-child(13) { animation-delay: 0.50s; }
+  .gallery-grid .card:nth-child(14) { animation-delay: 0.54s; }
+ 
+  .card-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: #111;
+    cursor: zoom-in;
+  }
+  .card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .card-img-wrap:hover img { transform: scale(1.08); }
+  .card-img-wrap::after {
+    content: '\002B View Larger';
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 10px 14px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+    color: var(--yellow);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all var(--transition);
+  }
+  .card-img-wrap:hover::after { opacity: 1; transform: translateY(0); }
+ 
+  .card-body {
+    padding: 16px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .card-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    flex: 1;
+  }
+ 
+  .quote-btn {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--yellow);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+  }
+  .quote-btn:hover { background: var(--yellow-dark); transform: translateY(-1px); }
+ 
+  /* ── Lightbox ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(6,6,7,0.94);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    padding: 4vh 4vw;
+    animation: fadeIn 0.25s ease;
+  }
+  .lightbox.active { display: flex; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+ 
+  .lightbox-inner { position: relative; max-width: 900px; width: 100%; text-align: center; }
+  .lightbox img {
+    max-height: 88vh;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #2c2c30;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+  .lightbox-close {
+    position: absolute;
+    top: -46px; right: 0;
+    background: var(--yellow);
+    color: var(--black);
+    border: none;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform var(--transition);
+  }
+  .lightbox-close:hover { transform: rotate(90deg); }
+  .lightbox-caption { color: var(--text-muted); margin-top: 14px; font-size: 0.9rem; }
+ 
+  /* ── Footer CTA ── */
+  .footer-cta {
+    text-align: center;
+    padding: 60px 6% 70px;
+    background: var(--dark-gray);
+    border-top: 1px solid #2c2c30;
+  }
+  .footer-cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .footer-cta p { color: var(--text-muted); margin-bottom: 26px; }
+  .footer-cta .quote-btn { display: inline-flex; padding: 14px 32px; font-size: 0.9rem; }
+ 
+  /* ── Simple footer ── */
+  footer {
+    background: #050505;
+    padding: 32px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top: 1px solid #1a1a1a;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: var(--yellow);
+    letter-spacing: 0.05em;
+  }
+  .footer-logo span { color: #555; }
+  .footer-copy { font-size: 0.75rem; color: #444; }
+ 
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+ 
+<div class="hazard-stripe"></div>
+ 
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">KHALS <span>SAFETY</span></a>
+  <a href="index.html#products" class="back-btn">&#8592; Back to Products</a>
+</nav>
+ 
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="section-label">JCB Authorised Distributor</div>
+  <h1>Safety Shoes Collection</h1>
+  <p>Steel toe, composite toe, ESD, welding, water-repellent and heat-resistant safety footwear engineered for demanding industrial environments.</p>
+</header>
+ 
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery-grid">
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-01.jpg','Rush, Electron, Exvolt & Hasten')">
+        <img src="assets/safety-shoes/shoe-01.jpg" alt="Rush, Electron, Exvolt and Hasten safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Rush, Electron, Exvolt &amp; Hasten</h3>
+        <p class="card-desc">Composite toe sporty &amp; ESD-rated safety shoes with water-repellent, fuel and chemical resistant construction.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Rush%2C%20Electron%2C%20Exvolt%20%26%20Hasten%20safety%20shoes." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-02.jpg','Fastarc')">
+        <img src="assets/safety-shoes/shoe-02.jpg" alt="Fastarc lightweight safety shoe" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Fastarc</h3>
+        <p class="card-desc">Ultra-lightweight, highly flexible steel toe safety shoe with seam-free breathable knit upper for all-day comfort.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Fastarc%20safety%20shoes." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-03.jpg','Product Design & Sole Technology')">
+        <img src="assets/safety-shoes/shoe-03.jpg" alt="JCB product design and sole technology diagram" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Product Design &amp; Sole Technology</h3>
+        <p class="card-desc">A closer look at construction: PU midsole, antistatic layers, 200J toe cap and biomechanically engineered outsole grip.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20more%20details%20on%20the%20safety%20shoe%20construction%20%26%20sole%20technology." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-04.jpg','Migpal, Hymast S2, Mymicros S2 & Speedmax')">
+        <img src="assets/safety-shoes/shoe-04.jpg" alt="Migpal, Hymast S2, Mymicros S2 and Speedmax safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Migpal, Hymast S2, Mymicros S2 &amp; Speedmax</h3>
+        <p class="card-desc">Composite toe leather shoes, slip-on options and a biker safety boot — all fuel, oil and chemical resistant.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Migpal%2C%20Hymast%20S2%2C%20Mymicros%20S2%20%26%20Speedmax." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-05.jpg','Speedmax')">
+        <img src="assets/safety-shoes/shoe-05.jpg" alt="Speedmax motorcycle safety boot" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Speedmax</h3>
+        <p class="card-desc">Leather motorcycling safety boot with reinforced shift pads, heel counter and slip-resistant SRC-graded PU sole.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Speedmax%20safety%20boots." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-06.jpg','Excavator, Fastrac, Exec & Vent')">
+        <img src="assets/safety-shoes/shoe-06.jpg" alt="Excavator, Fastrac, Exec and Vent safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Excavator, Fastrac, Exec &amp; Vent</h3>
+        <p class="card-desc">Steel toe leather boots, breathable knit sneakers and a brogue-style formal safety shoe for site &amp; office wear.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Excavator%2C%20Fastrac%2C%20Exec%20%26%20Vent." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-07.jpg','Trekker, Hydromaster S2, Lucent S2 & Glide')">
+        <img src="assets/safety-shoes/shoe-07.jpg" alt="Trekker, Hydromaster S2, Lucent S2 and Glide safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Trekker, Hydromaster S2, Lucent S2 &amp; Glide</h3>
+        <p class="card-desc">Nubuck leather boot, water-resistant slip-on clogs and a trendy nubuck slip-on — steel toe throughout.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Trekker%2C%20Hydromaster%20S2%2C%20Lucent%20S2%20%26%20Glide." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-08.jpg','Old vs New Certification')">
+        <img src="assets/safety-shoes/shoe-08.jpg" alt="Old vs new safety footwear certification standards" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Old vs New Certification</h3>
+        <p class="card-desc">Understand IS 15298 / EN ISO 20345 standard updates — slip resistance, protective midsole and scuff cap ratings.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20safety%20shoe%20certifications." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-09.jpg','Heatmax')">
+        <img src="assets/safety-shoes/shoe-09.jpg" alt="Heatmax foundry safety boot" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Heatmax</h3>
+        <p class="card-desc">Foundry-grade safety boot rated to 350°C heat resistance with strong resistance to acids, alkalis and fats.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Heatmax%20safety%20boots." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-10.jpg','Ounce, Rumble, Gutso & Earthmover')">
+        <img src="assets/safety-shoes/shoe-10.jpg" alt="Ounce, Rumble, Gutso and Earthmover safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Ounce, Rumble, Gutso &amp; Earthmover</h3>
+        <p class="card-desc">Super lightweight textured leather steel toe shoes with reflective strips, built for everyday industrial use.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Ounce%2C%20Rumble%2C%20Gutso%20%26%20Earthmover." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-11.jpg','Countess, Duchess, Senorita & Heatmax')">
+        <img src="assets/safety-shoes/shoe-11.jpg" alt="Countess, Duchess, Senorita and Heatmax safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Countess, Duchess, Senorita &amp; Heatmax</h3>
+        <p class="card-desc">Ladies' steel toe safety shoes with velcro or lace fastening, plus a full-grain leather heat-resistant boot.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Countess%2C%20Duchess%2C%20Senorita%20%26%20Heatmax." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-12.jpg','U-Metro')">
+        <img src="assets/safety-shoes/shoe-12.jpg" alt="U-Metro youthful safety sneaker" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">U-Metro</h3>
+        <p class="card-desc">Youthful, stylish steel toe safety sneaker with climate-optimized materials and best-in-class slip resistance.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20U-Metro%20safety%20shoes." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-13.jpg','Swift, Sprint, U-Metro & Microrig S2')">
+        <img src="assets/safety-shoes/shoe-13.jpg" alt="Swift, Sprint, U-Metro and Microrig S2 safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Swift, Sprint, U-Metro &amp; Microrig S2</h3>
+        <p class="card-desc">Sporty steel toe shoes plus a micro-fiber safety boot suited for the oil &amp; gas industry.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Swift%2C%20Sprint%2C%20U-Metro%20%26%20Microrig%20S2." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+    <article class="card">
+      <div class="card-img-wrap" onclick="openLightbox('assets/safety-shoes/shoe-14.jpg','Weldo, All-Terrain, Mighty & Agile')">
+        <img src="assets/safety-shoes/shoe-14.jpg" alt="Weldo, All-Terrain, Mighty and Agile safety shoes" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Weldo, All-Terrain, Mighty &amp; Agile</h3>
+        <p class="card-desc">Flame-resistant welder's boot, HRO-rated all-terrain shoe, and ESD-safe composite toe shoes for sensitive environments.</p>
+        <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Weldo%2C%20All-Terrain%2C%20Mighty%20%26%20Agile." target="_blank" rel="noopener">Request a Quote</a>
+      </div>
+    </article>
+ 
+  </div>
+</section>
+ 
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <h2>Need help choosing the right safety shoe?</h2>
+  <p>Talk to our team for bulk pricing, custom branding and site-specific safety compliance.</p>
+  <a class="quote-btn" href="https://wa.me/919884081509?text=Hi%2C%20I%27d%20like%20help%20choosing%20safety%20shoes%20for%20my%20team." target="_blank" rel="noopener">Chat on WhatsApp</a>
+</section>
+ 
+<div class="hazard-stripe"></div>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KHALS <span>SAFETY SOLUTIONS</span></div>
+  <div class="footer-copy">© 2026 KHALS Safety Solutions, Thiruvallur, Tamil Nadu</div>
+</footer>
+ 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close preview">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+</div>
+ 
+<script>
+  function openLightbox(src, caption) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const cap = document.getElementById('lightbox-caption');
+    img.src = src;
+    img.alt = caption;
+    cap.textContent = caption;
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOnBackdrop(e) {
+    if (e.target.id === 'lightbox') closeLightbox();
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+ 
+</body>
+</html>
