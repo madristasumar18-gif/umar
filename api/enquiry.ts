@@ -82,7 +82,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
           <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #0D0D0D; margin-top: 0;">Quick Contact</h3>
             <p><strong>Phone:</strong> <a href="tel:+919884081509">+91 98840 81509</a></p>
-            <p><strong>Website:</strong> <a href="http://www.khalssafety.com">www.khalssafety.com</a></p>
+            <p><strong>Website:</strong> <a href="http://www.khalssafety.in">www.khalssafety.in</a></p>
             <p><strong>Address:</strong> Plot No. 52, SPH Road, Sree Venkateshwara Nagar, Polivakkam, Thiruvallur – 602002, Tamil Nadu, India</p>
           </div>
 
